@@ -1,4 +1,27 @@
 
 
+Studio Walkthrough Notes:
+
+* New project
+* Name: National Parks (Date here)
+* Description, anything
+* show map styles, dragging, clicking, search for Paris
+* Click +Data
+* Point out options (geojson, json, csv), notice on large files
+* Talk about our data, the NPS file, and how we had to modify it
+* Upload the data, show it selected
+* On map, note how it moved, note how Studio picked colors
+* Modify style for circle, then switch to icon, nature
+* show labels
+* click on a thing, note card
+* note the list of props with eyes to disable, line to show on 'main' card vs detailed
+* click to hide a bunch, reorganize with name, image on top
+* note how image renders, mention that may not always work out for you
+* show conditional style based on designation, also show via Add new style
+* add a bookmark for home, scroll way, search to go back
+* move on to share, note the different options, copy url in new tab
+* mention that as you edit, this will change for live folks
+
+
 Image credits:
 map.jpg - Photo by Alex Boyd on Unsplash (https://unsplash.com/photos/HA0Rgl-ISko)
