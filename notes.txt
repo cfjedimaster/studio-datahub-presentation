@@ -22,6 +22,50 @@ Studio Walkthrough Notes:
 * move on to share, note the different options, copy url in new tab
 * mention that as you edit, this will change for live folks
 
+CLI Walkthrough:
+
+here xyz list
+here xyz create -t "name" -d "desc"
+here xyz upload ID –f nation-parks-studio.geojson
+here xyz show ID
+here xyz analyze ID
+
+literally use the show cmd: show -v for Space Invader
+
+SWITCH BACK TO TAGS
+uplaod w/ tag:  here xyz upload -f file.geojson -p designation SPACEID
+
+get by tag
+here xyz show 7dnEdlMy -t designation@national_river
+-p p.name
+
+SWITCH BACK TO SEARCH
+search around me (186 miles)
+ here xyz show 7dnEdlMy --center 30.22478,-92.02402 --radius 300000 --spatial
+  here xyz show 7dnEdlMy -s p.parkCode=frla
 
 Image credits:
 map.jpg - Photo by Alex Boyd on Unsplash (https://unsplash.com/photos/HA0Rgl-ISko)
+cat_keyboard.jpg - Photo by Sereja Ris on Unsplash (https://unsplash.com/photos/g3B53PbBfwU)
+
+ray todo: base preso im using is COdeForBetterDaysStdio pdf
+
+todo:
+					<h2>Resources</h2>
+					<ul>
+						<li>Overview
+							<ul><li><a href="https://www.here.xyz/studio/" target="_new">https://www.here.xyz/studio/</a></li></ul>
+						</li>
+						<li>Slack and Stack Overflow
+							<ul>
+								<li><a href="http://t.her.is/slack" target="_new">http://t.her.is/slack</a></li>
+								<li><a href="https://stackoverflow.com/questions/tagged/here-api">https://stackoverflow.com/questions/tagged/here-api</a></li>
+							</ul>
+						</li>
+						<li>Nicer Map Examples
+							<ul>
+								<li><a href="https://developer.here.com/products/xyz#explore-maps-built-with-xyz" target="_new">https://developer.here.com/products/xyz#explore-maps-built-with-xyz</a></li>
+							</ul>
+						</li>
+						<li><a href="https://developer.here.com/pricing" target="_new">Freemium and Pricing Details</a></li>
+					</ul>
