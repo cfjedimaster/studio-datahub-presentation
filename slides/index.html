@@ -116,7 +116,7 @@
 				<section>
 				<h2>CLI</h2>
 				<ul>
-				<li class="fragment">Require Node.js (just for npm!)</li>
+				<li class="fragment">Require Node.js (but no Node knowledge)</li>
 				<li class="fragment"><code>npm install -g @here/cli</code></li>
 				<li class="fragment">One time: <code>here configure</code></li>
 				</ul>
@@ -172,6 +172,149 @@
 					<h1>Demo</h1>
 				</section>
 
+				<section>
+				<h2>REST APIs</h2>
+				<ul>
+				<li class="fragment">Everything I've already shown, but in HTTP form</li>
+				<li class="fragment">A bit more</li>
+				<li class="fragment">Token based security</li>
+				<li class="fragment"><a href="https://developer.here.com/documentation/studio/api-reference-swagger.html">API Reference</a></li>
+				</ul>
+				</section>
+
+				<section>
+				<pre><code class="language-javascript">
+(async () => { 
+
+  const fetch = require('node-fetch');
+  const root = 'https://xyz.api.here.com/hub/';
+  const token = process.env.TOKEN;
+
+  spaceId = 'someSpace';
+
+  let features = await fetch(root + `spaces/${spaceId}/iterate`, {
+    headers: { Authorization: `Bearer ${token}` }
+  })
+  .then(res => res.json());
+
+  console.log(features);
+
+})();				
+				</code></pre>
+				</section>
+
+				<section>
+				<h2>Customized Maps</h2>
+				<ul>
+				<li class="fragment">JavaScript Maps - <a href="https://developer.here.com/products/maps" target="_new">Docs</a></li>
+				<li class="fragment">Customize Look and Feel</li>
+				<li class="fragment">Customize interactivity</li>
+				<li class="fragment">Customise markers</li>
+				<li class="fragment">And so on and so on...</li>
+				</ul>
+				</section>
+
+<section>
+				<h2>The Basics</h2>
+				<ul>
+				<li class="fragment">Add JS/CSS libs</li>				
+				</ul>
+				</section>
+
+				<section>
+				<pre><code class="language-html" data-trim>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+<link href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" rel="stylesheet" />
+				</code></pre>
+				</section>
+
+				<section>
+				<h2>The Basics</h2>
+				<ul>
+				<li>Add JS/CSS libs</li>
+				<li class="fragment">Add a map object (centered on so and so)</li>
+				</ul>
+				</section>
+
+				<section>
+				<pre class="stretch"><code class="language-javascript" data-trim>
+var platform = new H.service.Platform({
+	apikey: 'api key'
+});
+
+// Obtain the default map types from the platform object:
+var defaultLayers = platform.createDefaultLayers();
+
+var map = new H.Map(
+	document.getElementById('mapContainer'),
+	defaultLayers.vector.normal.map,
+	{
+		zoom: 3,
+		center: { lat: 38.7984, lng: -96.3944 },
+		pixelRatio: window.devicePixelRatio || 1
+	}
+);
+
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+				</code></pre>
+				</section>
+
+				<section>
+				<h2>The Basics</h2>
+				<ul>
+				<li>Add JS/CSS libs</li>
+				<li>Add a map object (centered on so and so)</li>
+				<li class="fragment">Add Data Hub</li>
+				</ul>
+				</section>
+
+				<section>
+				<pre><code class="language-javascript" data-trim>
+const service = platform.getXYZService({
+	token: 'data hub specific token',
+});
+
+const XYZ_SPACE = '73KBVoD8';
+const mySpaceProvider = 
+		new H.service.xyz.Provider(service, XYZ_SPACE, {});
+
+const mySpaceLayer = new H.map.layer.TileLayer(mySpaceProvider);
+// add a layer to the map
+map.addLayer(mySpaceLayer);				
+				</code></pre>
+				</section>
+
+				<section>
+					<h1>Demo</h1>
+				</section>
+
+				<section>
+				<h2>Data Hub "Add-on"</h2>
+				<ul>
+				<li class="fragment">Paid tier (45 USD per month)</li>
+				<li class="fragment">Increases transfer + storage</li>
+				<li class="fragment">Better search support</li>
+				<li class="fragment">Virtual Spaces</li>
+				<li class="fragment">Hexbins</li>
+				<li class="fragment">Schema validation</li>
+				<li class="fragment">Activity Log</li>
+				<li class="fragment">Rules-based tagging</li>
+				<li class="fragment"><a href="https://developer.here.com/tutorials/using-the-data-hub-cli-to-create-hexbins-from-csv/" target="_new">Tutorial 1</a> and 
+				<a href="https://developer.here.com/tutorials/using-the-data-hub-cli-for-advanced-searching/" target="_new">Tutorial 2</a></li>
+				</ul>
+				</section>
+
+				<section>
+				<h2>Considerations</h2>
+				<ul>
+				<li class="fragment"></li>
+				</ul>
+				</section>
 			</div>
 		</div>
 
