@@ -6,9 +6,9 @@ Studio Walkthrough Notes:
 * Name: National Parks (Date here)
 * Description, anything
 * show map styles, dragging, clicking, search for Paris
-* Click +Data
+* Click +Data 
 * Point out options (geojson, json, csv), notice on large files
-* Talk about our data, the NPS file, and how we had to modify it
+* Talk about our data, the NPS file, and how we had to modify it (national-parks-studio.geojson)
 * Upload the data, show it selected
 * On map, note how it moved, note how Studio picked colors
 * Modify style for circle, then switch to icon, nature
@@ -21,6 +21,10 @@ Studio Walkthrough Notes:
 * add a bookmark for home, scroll way, search to go back
 * move on to share, note the different options, copy url in new tab
 * mention that as you edit, this will change for live folks
+
+Studio Demo 2:
+
+Show hexbins on the NPS data
 
 CLI Walkthrough:
 
