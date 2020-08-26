@@ -52,24 +52,4 @@ Image credits:
 map.jpg - Photo by Alex Boyd on Unsplash (https://unsplash.com/photos/HA0Rgl-ISko)
 cat_keyboard.jpg - Photo by Sereja Ris on Unsplash (https://unsplash.com/photos/g3B53PbBfwU)
 
-ray todo: base preso im using is COdeForBetterDaysStdio pdf
 
-todo:
-					<h2>Resources</h2>
-					<ul>
-						<li>Overview
-							<ul><li><a href="https://www.here.xyz/studio/" target="_new">https://www.here.xyz/studio/</a></li></ul>
-						</li>
-						<li>Slack and Stack Overflow
-							<ul>
-								<li><a href="http://t.her.is/slack" target="_new">http://t.her.is/slack</a></li>
-								<li><a href="https://stackoverflow.com/questions/tagged/here-api">https://stackoverflow.com/questions/tagged/here-api</a></li>
-							</ul>
-						</li>
-						<li>Nicer Map Examples
-							<ul>
-								<li><a href="https://developer.here.com/products/xyz#explore-maps-built-with-xyz" target="_new">https://developer.here.com/products/xyz#explore-maps-built-with-xyz</a></li>
-							</ul>
-						</li>
-						<li><a href="https://developer.here.com/pricing" target="_new">Freemium and Pricing Details</a></li>
-					</ul>
